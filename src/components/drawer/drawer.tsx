@@ -1,6 +1,6 @@
 import { XMarkIcon } from '@heroicons/react/20/solid';
 import userIcon from '../../assets/avatar.png';
-import { cn } from '../../utils/cn';
+import { cn } from '../../utils';
 import { useAuth } from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 
