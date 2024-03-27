@@ -1,11 +1,11 @@
 import { useState, useMemo } from 'react';
-import { Book, SearchFilter } from '../types';
-import { FilterPrices, FilterTitle } from '../constants';
-import mockData from '../data/mock-data.json';
-import { BookCard } from '../components/book-card/book-card';
-import { Filter } from '../components/filter/filter';
-import { Container } from '../components/container/container';
-import { getFilteredBooks } from '../utils';
+import { Book, SearchFilter } from '../../types';
+import { FilterPrices, FilterTitle } from '../../constants';
+import mockData from '../../data/mock-data.json';
+import { BookCard } from '../../components/book-card/book-card';
+import { Filter } from '../../components/filter/filter';
+import { Container } from '../../components/container/container';
+import { getFilteredBooks } from '../../utils';
 
 const CatalogPage = () => {
   const { books }: { books: Book[] } = mockData;

@@ -1,6 +1,6 @@
-import { useCart } from '../hooks/';
-import { CartItem } from '../components/cart-item/cart-item';
-import { Container } from '../components/container/container';
+import { useCart } from '../../hooks';
+import { CartItem } from '../../components/cart-item/cart-item';
+import { Container } from '../../components/container/container';
 
 const CartPage = () => {
   const { cartItems, clearCart, getTotalCartPrice } = useCart();
