@@ -18,7 +18,7 @@ const initialCartContext: CartContextType = {
 
 type CartContextType = {
   cartItems: Cart[];
-  addToCart: (newItem: Cart, availableNumber: number) => void;
+  addToCart: (newItem: Cart) => void;
   deleteFromCart: (bookId: number) => void;
   clearCart: () => void;
   getTotalCartPrice: () => number;

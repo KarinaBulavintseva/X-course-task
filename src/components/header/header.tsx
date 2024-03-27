@@ -1,16 +1,20 @@
+import { useState } from 'react';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { Bars3Icon } from '@heroicons/react/16/solid';
 import userIcon from '../../assets/avatar.png';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth, useCart } from '../../hooks';
 import { Drawer } from '../drawer/drawer';
 import { Backdrop } from '../backdrop/backdrop';
 import { Container } from '../container/container';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../hooks';
 
 const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
+
   const { user, signout } = useAuth();
+  const { getTotalCartItems } = useCart();
+
+  const numberOfOrders = getTotalCartItems();
 
   const navigate = useNavigate();
 
@@ -31,18 +35,22 @@ const Header = () => {
       <Container>
         <div className='flex min-h-[50px] items-center md:min-h-14'>
           <div>
-            <a href='/' className='font-semibold'>
+            <Link to='/' className='font-semibold'>
               X-course task / Bulavintseva Karyna
-            </a>
+            </Link>
           </div>
           <div className='flex grow justify-end gap-7'>
             {user && (
               <>
                 <div className='relative flex items-center p-2'>
-                  <span className='absolute right-0 top-0 block flex h-5 w-5 items-center justify-center rounded-full bg-[#fdba21] text-xs'>
-                    1
-                  </span>
-                  <ShoppingCartIcon className='h-7 w-7 ' />
+                  <Link to='/cart'>
+                    {Boolean(numberOfOrders) && (
+                      <span className='absolute right-0 top-0 block flex h-5 w-5 items-center justify-center rounded-full bg-[#fdba21] text-xs'>
+                        {numberOfOrders}
+                      </span>
+                    )}
+                    <ShoppingCartIcon className='h-7 w-7 ' />
+                  </Link>
                 </div>
                 <div className='hidden gap-7 md:flex'>
                   <div className='flex items-center'>
