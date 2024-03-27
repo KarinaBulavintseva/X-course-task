@@ -8,8 +8,7 @@ import {
   NotFoundPage,
 } from './pages';
 import { RequireAuth } from './hocs';
-import { AuthProvider } from './context/authProvider';
-import { CartProvider } from './context/cartProvider';
+import { AuthProvider, CartProvider } from './context';
 import { Wrapper } from './components/wrapper/wrapper';
 import { ScrollToTop } from './components/scrollToTop/scrollToTop';
 
