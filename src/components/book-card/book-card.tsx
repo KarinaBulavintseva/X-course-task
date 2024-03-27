@@ -7,15 +7,13 @@ type BookCardProps = {
 };
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
-  let { image } = book;
-  if (!image.trim()) {
-    image = imageNotFound;
-  }
+  const { image } = book;
+  const bookImage = image.trim() || imageNotFound;
   return (
     <div className='flex w-[250px] flex-col place-self-stretch overflow-hidden rounded shadow-lg'>
       <div className='flex grow flex-col'>
         <Link to={`/books/${book.id}`}>
-          <img className='height-[328px]' src={image} alt='book-image' />
+          <img className='height-[328px]' src={bookImage} alt='book-image' />
         </Link>
 
         <div className='px-6 py-3'>
