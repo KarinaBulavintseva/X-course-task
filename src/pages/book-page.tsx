@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import mockData from '../data/mock-data.json';
-import notFoundImage from '../assets/not-found.jpg';
+import imageNotFound from '../assets/not-found.jpg';
 import { Book } from '../types';
 import { AddToCartPanel } from '../components/add-to-cart-panel/add-to-cart-panel';
 import { Container } from '../components/container/container';
@@ -17,7 +17,7 @@ export function BookPage() {
 
   const availableAmount = amount || 0;
 
-  const bookImage = image.trim() || notFoundImage;
+  const bookImage = image.trim() || imageNotFound;
 
   const bookTags = tags.join(' ');
 
