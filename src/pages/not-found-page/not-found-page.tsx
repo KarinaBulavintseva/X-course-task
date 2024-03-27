@@ -1,4 +1,4 @@
-import { Container } from '../components/container/container';
+import { Container } from '../../components/container/container';
 
 const NotFoundPage = () => {
   return (

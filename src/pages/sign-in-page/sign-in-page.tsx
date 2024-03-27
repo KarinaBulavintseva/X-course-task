@@ -1,9 +1,9 @@
-import userIcon from '.././assets/avatar.png';
-import { Container } from '../components/container/container';
+import userIcon from '../../assets/avatar.png';
+import { Container } from '../../components/container/container';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useAuth } from '../hooks/useAuth';
-import { cn } from '../utils/cn';
+import { useAuth } from '../../hooks/useAuth';
+import { cn } from '../../utils/cn';
 
 interface IFormInputs {
   username: string;

@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import mockData from '../data/mock-data.json';
-import imageNotFound from '../assets/not-found.jpg';
-import { Book } from '../types';
-import { AddToCartPanel } from '../components/add-to-cart-panel/add-to-cart-panel';
-import { Container } from '../components/container/container';
+import mockData from '../../data/mock-data.json';
+import imageNotFound from '../../assets/not-found.jpg';
+import { Book } from '../../types';
+import { AddToCartPanel } from '../../components/add-to-cart-panel/add-to-cart-panel';
+import { Container } from '../../components/container/container';
 
 export function BookPage() {
   const { bookId } = useParams();
