@@ -1,5 +1,4 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Wrapper } from './components/wrapper/wrapper';
 import {
   Layout,
   SignInPage,
@@ -11,11 +10,14 @@ import {
 import { RequireAuth } from './hocs';
 import { AuthProvider } from './context/authProvider';
 import { CartProvider } from './context/cartProvider';
+import { Wrapper } from './components/wrapper/wrapper';
+import { ScrollToTop } from './components/scrollToTop/scrollToTop';
 
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
+        <ScrollToTop />
         <Wrapper>
           <Routes>
             <Route path='/' element={<Layout />}>
